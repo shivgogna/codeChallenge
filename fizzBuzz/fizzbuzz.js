@@ -24,4 +24,19 @@ Create loop, end at num
     pass num[i] in arr
 */
 
-
+function fizzbuzzKing(num, a, b){
+    let fbArr = [];
+    for(let i = 0; i <= num; i++) {
+      if(i % a === 0 && i % b === 0) {
+        fbArr.push('fizzbuzz');
+      } else if(i % a === 0) {
+        fbArr.push('fizz');
+      }else if(i % b === 0) {
+        fbArr.push('buzz');
+      }else{
+        fbArr.push(i)
+      }
+    }
+    return fbArr;
+  }
+  fizzbuzzKing(15, 3, 5)
