@@ -10,3 +10,11 @@ Number of People in the Bus
   Question: Why do I get -3 when I try to return without people + busStops[i][0] - busStops[i][1]
   I think I have the answer, I'd like to tell you what I think it's doing when we speak later today
 */
+
+function busPassengers(busStops){
+    let totalNum = 0;
+    for(let i = 0; i < busStops.length; i++){
+       totalNum = totalNum + busStops[i][0] - busStops[i][1];
+    }
+    return totalNum;
+  }
