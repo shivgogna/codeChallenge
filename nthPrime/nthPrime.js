@@ -63,3 +63,24 @@ Create loop to iterate through number (for(let i=0; counter<=num;i++))
   if counter == num
     return num
 */
+function nthPrime(num) {
+    let counter = 0;
+    
+    function isPrime(i) {
+      for(let j = 2; j < i; j++){
+          if(i % j == 0) {
+            return false;
+          }
+        }
+        return true;
+      }
+      
+    for(let i = 2; counter <= num; i++) {
+       if(isPrime(i)) {
+        counter += 1;
+        if(counter === num) {
+          return i;
+        }
+      }
+    }
+  }
