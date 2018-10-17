@@ -19,3 +19,24 @@ loop through object (for in loop)
   if num is greater than mostFreq variable, replace it
 return string variable of num of most freq occurs most freq value times
 */
+
+function mostFrequent(array){
+    let numCount = {};
+    let mostFreq;
+  //   let value = 0;
+    
+    for(let i = 0; i < array.length; i++) {
+      if(numCount[array[i]]){
+        numCount[array[i]] += 1;
+      } else {
+        numCount[array[i]] = 1;
+      }
+    }
+    for(let num in numCount) {
+      if(mostFreq == undefined || numCount[num] > numCount[mostFreq]) {
+  //       mostFreq = numCount[num];
+        mostFreq = num;
+      }
+    }
+    return `${mostFreq} occurs ${numCount[mostFreq]} times`;
+  }
