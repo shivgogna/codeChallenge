@@ -48,8 +48,4 @@ function anagrams(stringA, stringB) {
       charMap[char] = charMap[char] + 1 || 1;
     }
     return charMap;
-  }
-  
-  
-  module.exports = anagrams;
-  
+  }  
