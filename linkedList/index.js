@@ -9,6 +9,7 @@ class LinkedList {
     constructor() {
         this.head = null;
     }
+
     insertFirst(data) {
         this.head = new Node(data, this.head);
     }
@@ -43,5 +44,18 @@ class LinkedList {
         }
     }
 
-    
+    clear() {
+        this.head = null;
+    }
+
+    removeFirst() {
+        if(!this.head) return;
+        this.head = this.head.next;
+    }
+
+    removeLast() {
+        if(!this.head) return;
+        this.head.length
+    }
+
 }
